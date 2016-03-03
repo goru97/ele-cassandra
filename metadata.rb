@@ -1,0 +1,7 @@
+name             'ele-cassandra'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures ele-cassandra'
+long_description 'Installs/Configures ele-cassandra'
+version          '0.1.0'
