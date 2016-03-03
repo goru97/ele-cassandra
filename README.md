@@ -39,4 +39,5 @@ Include `ele-cassandra` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Gaurav Bajaj (gaurav.bajaj@rackspace.com)
+
