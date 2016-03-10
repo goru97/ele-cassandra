@@ -1,6 +1,6 @@
 # ele-cassandra-cookbook
 
-TODO: Enter the cookbook description here.
+A wrapper cookbook around cassandra-dse cookbook.
 
 ## Supported Platforms
 
