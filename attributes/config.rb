@@ -1,0 +1,45 @@
+include_attribute 'cassandra-dse::config'
+
+default['cassandra']['config']['cluster_name'] = 'data'
+default['cassandra']['config']['partitioner'] = 'org.apache.cassandra.dht.RandomPartitioner'
+default['cassandra']['config']['concurrent_reads'] = 32 # suggested at 16 * number of drives
+default['cassandra']['config']['concurrent_writes'] = 32 # suggested at 8 * number of cpu cores
+default['cassandra']['config']['listen_address'] = node['ipaddress']
+default['cassandra']['config']['broadcast_address'] = node['ipaddress']
+default['cassandra']['config']['rpc_address'] = '0.0.0.0'
+default['cassandra']['config']['rpc_port'] = '9160'
+default['cassandra']['config']['storage_port'] = 7000
+default['cassandra']['config']['ssl_storage_port'] = 7001
+default['cassandra']['config']['native_transport_port'] = '9042'
+
+default['cassandra']['config']['start_native_transport'] = true
+default['cassandra']['config']['start_rpc'] = true
+default['cassandra']['config']['rpc_keepalive'] = true
+default['cassandra']['config']['rpc_server_type'] = 'sync' # 'sync' or 'hsha'
+default['cassandra']['config']['rpc_min_threads'] = 16
+default['cassandra']['config']['rpc_max_threads'] = 2048
+default['cassandra']['config']['thrift_framed_transport_size_in_mb'] = 15
+default['cassandra']['config']['thrift_max_message_length_in_mb'] = 16
+default['cassandra']['config']['incremental_backups'] = false
+default['cassandra']['config']['snapshot_before_compaction'] = false
+default['cassandra']['config']['auto_snapshot'] = true
+default['cassandra']['config']['column_index_size_in_kb'] = 64
+default['cassandra']['config']['compaction_throughput_mb_per_sec'] = 16
+default['cassandra']['config']['read_request_timeout_in_ms'] = 30000
+default['cassandra']['config']['range_request_timeout_in_ms'] = 30000
+default['cassandra']['config']['write_request_timeout_in_ms'] = 30000
+default['cassandra']['config']['truncate_request_timeout_in_ms'] = 60000
+default['cassandra']['config']['request_timeout_in_ms'] = 30000
+default['cassandra']['config']['cross_node_timeout'] = false
+default['cassandra']['config']['streaming_socket_timeout_in_ms'] = 0 # never timeout streams
+default['cassandra']['config']['stream_throughput_outbound_megabits_per_sec'] = 400
+default['cassandra']['config']['endpoint_snitch'] = 'RackInferringSnitch' # endpoint_snitch config
+default['cassandra']['config']['dynamic_snitch_update_interval_in_ms'] = 100
+default['cassandra']['config']['dynamic_snitch_reset_interval_in_ms'] = 600000
+default['cassandra']['config']['dynamic_snitch_badness_threshold'] = 0.1
+default['cassandra']['config']['request_scheduler'] = 'org.apache.cassandra.scheduler.NoScheduler'
+default['cassandra']['config']['phi_convict_threshold'] = 8
+default['cassandra']['config']['index_interval'] = 128
+default['cassandra']['config']['num_tokens'] = 256
+default['cassandra']['config']['internode_compression'] = 'all' # all, dc, none
+default['cassandra']['config']['inter_dc_tcp_nodelay'] = true
