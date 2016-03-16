@@ -13,6 +13,7 @@ include_recipe 'python'
 include_recipe 'python::pip'
 include_recipe 'ele-cassandra::tarball'
 include_recipe 'ele-cassandra::config'
+include_recipe 'cassandra-dse::opscenter_agent'
 
 # install cql, required for cqlsh
 python_pip 'cql' do
