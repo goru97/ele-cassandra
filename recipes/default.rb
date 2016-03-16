@@ -8,7 +8,8 @@
 #
 
 include_recipe 'apt'
-include_recipe 'cassandra-dse'
+include_recipe 'java' if node['cassandra']['install_java']
 include_recipe 'ele-cassandra::tarball'
+include_recipe 'ele-cassandra::config'
 
 

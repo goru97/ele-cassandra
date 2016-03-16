@@ -22,11 +22,6 @@ default['cassandra']['service_action'] = [:enable, :start]
 default['cassandra']['jmx_port'] = 9080
 default['cassandra']['local_jmx'] = true
 
-default['cassandra']['limits']['memlock'] = 'unlimited'
-default['cassandra']['limits']['nofile'] = 48000
-default['cassandra']['limits']['nproc'] = 'unlimited'
-
-default['cassandra']['templates_cookbook'] = 'cassandra-dse'
 
 default['cassandra']['root_dir'] = '/var/lib/cassandra' # data/ subdir added to this root
 default['cassandra']['log_dir'] = '/var/log/cassandra'
