@@ -7,6 +7,8 @@ default['java']['oracle']['accept_oracle_download_terms'] = true
 
 default['cassandra']['install_java'] = true
 default['cassandra']['install_method'] = 'tarball'
+default['cassandra']['installation_dir'] = '/usr/local/cassandra'
+default['cassandra']['conf_dir']  = ::File.join(node['cassandra']['installation_dir'], 'conf')
 default['cassandra']['initial_token'] = 0
 default['cassandra']['service_name'] = 'cass'
 default['cassandra']['user'] = 'daemon'
@@ -21,7 +23,6 @@ default['cassandra']['dir_mode'] = '0755'
 default['cassandra']['service_action'] = [:enable, :start]
 default['cassandra']['jmx_port'] = 9080
 default['cassandra']['local_jmx'] = true
-
 
 default['cassandra']['root_dir'] = '/var/lib/cassandra' # data/ subdir added to this root
 default['cassandra']['log_dir'] = '/var/log/cassandra'
