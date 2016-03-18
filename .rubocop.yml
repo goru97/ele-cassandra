@@ -31,3 +31,7 @@ Metrics/PerceivedComplexity:
   Max: 14
 Metrics/AbcSize:
   Max: 51
+
+Lint/AssignmentInCondition:
+  Exclude:
+      - 'Rakefile'
