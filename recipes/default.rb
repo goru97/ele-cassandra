@@ -28,5 +28,3 @@ include_recipe 'ele-cassandra::config'
 python_pip 'cql' do
   action :install
 end
-
-

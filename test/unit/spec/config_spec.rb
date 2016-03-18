@@ -2,7 +2,6 @@ require 'chefspec'
 require_relative 'spec_helper'
 
 describe 'ele-cassandra::config' do
-
   let(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
 
   it 'executes the ruby block smash >= 2.1-attributes' do

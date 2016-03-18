@@ -2,7 +2,6 @@ require 'chefspec'
 require_relative 'spec_helper'
 
 describe 'ele-cassandra::default' do
-
   let(:chef_run) { ChefSpec::SoloRunner.converge(described_recipe) }
 
   it 'includes the `apt` recipe' do
@@ -32,5 +31,4 @@ describe 'ele-cassandra::default' do
   it 'installs a python pip package cql' do
     expect(chef_run).to install_python_pip('cql')
   end
-
 end

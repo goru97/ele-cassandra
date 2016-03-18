@@ -34,13 +34,12 @@ default['cassandra']['config']['snapshot_before_compaction'] = false
 default['cassandra']['config']['auto_snapshot'] = true
 default['cassandra']['config']['column_index_size_in_kb'] = 64
 default['cassandra']['config']['compaction_throughput_mb_per_sec'] = 16
-default['cassandra']['config']['read_request_timeout_in_ms'] = 30000
-default['cassandra']['config']['range_request_timeout_in_ms'] = 30000
-default['cassandra']['config']['write_request_timeout_in_ms'] = 30000
-default['cassandra']['config']['truncate_request_timeout_in_ms'] = 60000
-default['cassandra']['config']['request_timeout_in_ms'] = 30000
+default['cassandra']['config']['read_request_timeout_in_ms'] = 30_000
+default['cassandra']['config']['range_request_timeout_in_ms'] = 30_000
+default['cassandra']['config']['write_request_timeout_in_ms'] = 30_000
+default['cassandra']['config']['truncate_request_timeout_in_ms'] = 60_000
+default['cassandra']['config']['request_timeout_in_ms'] = 30_000
 default['cassandra']['config']['endpoint_snitch'] = 'RackInferringSnitch' # endpoint_snitch config
-
 
 # C* 2.1.0
 if node['cassandra']['version'] >= '2.1'
