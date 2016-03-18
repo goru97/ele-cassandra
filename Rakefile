@@ -3,17 +3,14 @@
 require 'foodcritic'
 require 'rubocop/rake_task'
 require 'rspec/core/rake_task'
+require 'kitchen'
 
-desc 'Run all lints'
-task :lint => %w(foodcritic rubocop)
-task :unit => %w(foodcritic rubocop spec)
-task :default => %w(foodcritic rubocop spec integration:vagrant)
-task :docker => %w(foodcritic rubocop spec integration:docker)
+namespace :style do
+  desc 'Ruby style checks'
+  RuboCop::RakeTask.new(:ruby)
 
-desc 'Run Rubocop Lint Task'
-task :rubocop do
-  puts 'Running Rubocop Lint..'
-  RuboCop::RakeTask.new
+  desc 'Chef style checks'
+  FoodCritic::Rake::LintTask.new(:chef)
 end
 
 desc 'Run Food Critic Lint Task'
@@ -24,32 +21,8 @@ task :foodcritic do
   end
 end
 
-desc 'Run Chef Spec Test'
-task :spec do
-  RSpec::Core::RakeTask.new(:spec)
-end
-
-namespace :integration do
-  desc 'Run integration tests with kitchen-vagrant'
-  task :vagrant do
-    require 'kitchen'
-    Kitchen.logger = Kitchen.default_file_logger
-    Kitchen::Config.new.instances.each do |instance|
-      instance.test(:always)
-    end
-  end
-
-  begin
-    desc 'Run integration tests with kitchen-docker'
-    task :docker do
-      ENV['KI_DRIVER'] = 'docker'
-      require 'kitchen'
-      Kitchen.logger = Kitchen.default_file_logger
-      Kitchen::Config.new.instances.each do |instance|
-        instance.test(:always)
-      end
-    end
-  rescue LoadError
-    puts '>>>>> kitchen gem not loaded, omitting tasks' unless ENV['CI']
-  end
+# Rspec and ChefSpec
+desc 'Run ChefSpec unit tests'
+RSpec::Core::RakeTask.new(:spec) do |t, _args|
+  t.rspec_opts = 'test/unit'
 end
