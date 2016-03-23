@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/goru97/ele-cassandra.svg?branch=master)](https://travis-ci.org/goru97/ele-cassandra)
+
 # ele-cassandra-cookbook
 
 A wrapper cookbook around cassandra-dse cookbook.
