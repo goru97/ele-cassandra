@@ -11,6 +11,7 @@ default['cassandra']['config']['rpc_port'] = '9160'
 default['cassandra']['config']['storage_port'] = 7000
 default['cassandra']['config']['ssl_storage_port'] = 7001
 default['cassandra']['config']['native_transport_port'] = '9042'
+
 if node['cassandra']['version'] < '2.0'
   default['cassandra']['config']['memtable_flush_queue_size'] = 4
   default['cassandra']['config']['in_memory_compaction_limit_in_mb'] = 64

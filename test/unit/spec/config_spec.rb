@@ -15,4 +15,13 @@ describe 'ele-cassandra::config' do
   it 'includes the `cassandra-dse::config` recipe' do
     expect(chef_run).to include_recipe('cassandra-dse::config')
   end
+  it 'sets expected config attributes' do
+    expect(chef_run.node['cassandra']['config']['memtable_flush_queue_size']).to eq(4)
+    expect(chef_run.node['cassandra']['config']['in_memory_compaction_limit_in_mb']).to eq(64)
+    expect(chef_run.node['cassandra']['config']['concurrent_compactors']).to eq(nil)
+    expect(chef_run.node['cassandra']['config']['multithreaded_compaction']).to eq(false)
+    expect(chef_run.node['cassandra']['config']['compaction_preheat_key_cache']).to eq(true)
+    expect(chef_run.node['cassandra']['config']['native_transport_min_threads']).to eq(nil)
+    expect(chef_run.node['cassandra']['config']['native_transport_max_threads']).to eq(nil)
+  end
 end
