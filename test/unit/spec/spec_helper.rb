@@ -10,10 +10,10 @@ require 'chef/application'
 ::UBUNTU_OPTS = {
   platform: 'ubuntu',
   version: '14.04',
-  log_level: ::LOG_LEVEL
+  log_level: 'debug'
 }.freeze
 ::CHEFSPEC_OPTS = {
-  log_level: ::LOG_LEVEL
+  log_level: 'debug'
 }.freeze
 
 def stub_resources
