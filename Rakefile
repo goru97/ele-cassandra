@@ -26,3 +26,15 @@ desc 'Run ChefSpec unit tests'
 RSpec::Core::RakeTask.new(:spec) do |t, _args|
   t.rspec_opts = 'test/unit'
 end
+
+desc 'All style checks'
+task style: %w(style:chef style:ruby)
+
+desc 'Style and unit tests'
+task unit: %w(style spec)
+
+desc 'All tests'
+task test: %w(style spec integration:vagrant)
+
+desc 'CI tests'
+task ci: %w(style spec integration:cloud)
