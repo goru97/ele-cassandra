@@ -24,7 +24,7 @@ end
 # Rspec and ChefSpec
 desc 'Run ChefSpec unit tests'
 RSpec::Core::RakeTask.new(:spec) do |t, _args|
-  t.rspec_opts = 'test/unit'
+  t.rspec_opts = 'test/unit', '--color'
 end
 
 desc 'All style checks'
