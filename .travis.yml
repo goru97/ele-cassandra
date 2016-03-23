@@ -2,7 +2,4 @@ language: ruby
 bundler_args: --without integration development
 rvm:
   - 2.1
-branches:
-  only:
-    - master
 script: bundle exec rake spec
