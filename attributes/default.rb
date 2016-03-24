@@ -1,4 +1,4 @@
-include_attribute 'cassandra-dse::spec'
+include_attribute 'cassandra-dse::default'
 
 default['java']['jdk_version'] = '7'
 default['java']['install_flavor'] = 'oracle'

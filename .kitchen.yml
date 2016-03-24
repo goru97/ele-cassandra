@@ -10,7 +10,7 @@ platforms:
   - name: centos-7.1
 
 suites:
-  - name: spec
+  - name: default
     run_list:
-      - recipe[ele-cassandra::spec]
+      - recipe[ele-cassandra::default]
     attributes:
