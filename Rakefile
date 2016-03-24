@@ -45,7 +45,7 @@ namespace :integration do
 
   desc 'Test Kitchen with cloud plugins'
   task :cloud do
-    if ENV['CI'] == 'true'
+    if ENV['TRAVIS'] == 'true'
       Kitchen.logger = Kitchen.default_file_logger
       @loader = Kitchen::Loader::YAML.new(local_config: '.kitchen.cloud.yml')
       config = Kitchen::Config.new(loader: @loader)
