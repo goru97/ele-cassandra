@@ -28,7 +28,12 @@ group :spec do
   gem 'chefspec'
   gem 'serverspec'
 end
+
 group :style do
   gem 'foodcritic'
   gem 'rubocop'
+end
+
+group :integration_rackspace do
+  gem 'kitchen-rackspace'
 end
