@@ -37,3 +37,7 @@ end
 group :integration_rackspace do
   gem 'kitchen-rackspace'
 end
+
+group :coverage do
+  gem 'coveralls'
+end

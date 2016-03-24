@@ -6,6 +6,7 @@ require 'rspec/expectations'
 require 'chefspec'
 require 'chefspec/berkshelf'
 require 'chef/application'
+require 'coveralls'
 
 ::UBUNTU_OPTS = {
   platform: 'ubuntu',
@@ -19,4 +20,5 @@ require 'chef/application'
 def stub_resources
 end
 
+Coveralls.wear!
 at_exit { ChefSpec::Coverage.report! }
