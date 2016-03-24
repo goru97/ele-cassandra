@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/goru97/ele-cassandra.svg?branch=master)](https://travis-ci.org/goru97/ele-cassandra)
+[![Build Status](https://circleci.com/gh/goru97/ele-cassandra.svg?style=svg)](https://circleci.com/gh/goru97/ele-cassandra)
 
 # ele-cassandra-cookbook
 
