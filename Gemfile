@@ -26,6 +26,7 @@ gem 'rake'
 group :spec do
   gem 'berkshelf'
   gem 'chefspec'
+  gem 'serverspec'
 end
 group :style do
   gem 'foodcritic'

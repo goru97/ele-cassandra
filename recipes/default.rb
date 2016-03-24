@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: ele-cassandra
-# Recipe:: default
+# Recipe:: spec
 #
 # Copyright (C) 2016 RACKSPACE INC.
 
