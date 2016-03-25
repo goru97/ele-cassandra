@@ -22,7 +22,7 @@ default['cassandra']['pid_dir'] = '/var/run/cassandra'
 default['cassandra']['dir_mode'] = '0755'
 default['cassandra']['service_action'] = [:enable, :start]
 default['cassandra']['jmx_port'] = 9080
-default['cassandra']['local_jmx'] = true
+default['cassandra']['local_jmx'] = false
 
 default['cassandra']['root_dir'] = '/var/lib/cassandra' # data/ subdir added to this root
 default['cassandra']['log_dir'] = '/var/log/cassandra'
