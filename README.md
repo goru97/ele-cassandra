@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/goru97/ele-cassandra.svg?branch=master)](https://travis-ci.org/goru97/ele-cassandra)
-[![Build Status](https://circleci.com/gh/goru97/ele-cassandra.svg?style=svg)](https://circleci.com/gh/goru97/ele-cassandra)
-[![Coverage Status](https://coveralls.io/repos/github/goru97/ele-cassandra/badge.svg?branch=master)](https://coveralls.io/github/goru97/ele-cassandra?branch=master)
+[![Build Status](https://travis-ci.org/mmi-cookbooks/ele-cassandra.svg?branch=master)](https://travis-ci.org/mmi-cookbooks/ele-cassandra)
+[![Build Status](https://circleci.com/gh/mmi-cookbooks/ele-cassandra.svg?style=svg)](https://circleci.com/gh/mmi-cookbooks/ele-cassandra)
+[![Coverage Status](https://coveralls.io/repos/github/mmi-cookbooks/ele-cassandra/badge.svg?branch=master)](https://coveralls.io/github/mmi-cookbooks/ele-cassandra?branch=master)
 
 # ele-cassandra-cookbook
 
